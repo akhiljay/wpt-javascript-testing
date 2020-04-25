@@ -1,4 +1,4 @@
-# Rapid prototyping and testing of javascript ideas using Webpagetest (WPT)
+# Rapid prototyping and testing of frontend perf optimization ideas using Webpagetest (WPT)
 
 Couple of days back I was trying to figure out how to test and evaluate the impact of new performance optimizations without having to make server side changes. The optimization that came to mind was [Addy Osmani](https://twitter.com/addyosmani)'s [quicklink](https://github.com/GoogleChromeLabs/quicklink/issues) library. The question is how can one test this library on their page without having to go through a server side change to the base page HTML file. 
 
