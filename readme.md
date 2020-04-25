@@ -17,12 +17,12 @@ quicklink.listen(); quicklink.prefetch(['https://www.foo.com/product1']); 
 script.src = 'https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.0.0-alpha/quicklink.umd.js'; 
 document.getElementsByTagName('body')[0].appendChild(script);
 ```
-* The first thing you need to do is remove line breaks and include it as one single line.
+* The first thing you need to do is remove line breaks and include it as one single line. Note to make sure you have space between the end of each line ```; ```
 ```javascript 
 var script = document.createElement('script'); script.type = 'text/javascript'; script.onload = function () {quicklink.listen(); quicklink.prefetch(['https://www.foo.com/product1']); }; script.src = 'https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.0.0-alpha/quicklink.umd.js'; document.getElementsByTagName('body')[0].appendChild(script);
 ```
 
-* The second thing you need to do is to verify if the script is doing what it needs to. In my case I needed this script to be injected right before the close of the </body> tag of the HTML. I can do this my running the same single line script snippet within the console section of my Chrome browser. If the script is inserted successfully then you know WPT also be able to do the same. 
+* The second thing you need to do is to verify if the script is doing what it needs to. In my case I needed this script to be injected right before the close of the ```</body>``` tag of the HTML. I can do this by running the same single line script snippet within the console section of my Chrome browser. If the script is inserted successfully then you know WPT also be able to do the same. 
 
 ### Creating the WPT script 
 The goal of quicklinks is to safely prefetch future pages users will potentially visit. To do this you will need to do the following 
