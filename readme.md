@@ -44,10 +44,10 @@ navigate https://www.foo.com/<page-you-wish-to-prefetch>
 You can add the WPT script outline above into the "script" section of webpagetest.org site. Once it's added go ahead and run your tests
 
 ## Gotchas 
-* Webpagetest does not show the fetches it made to prefetch cache. So don't owrry if it's missing from the waterfall
+* Webpagetest does not show the fetches it made to prefetch cache. So don't worry if it's missing from the waterfall.
 
 ## Feedback and Results
-Personally, I feel WPT is an amazing tool to rapidly test new ideas as long as it involves modifying the HTML file. I am currently testing some of these ideas and will post results of our testing soon. 
+Personally, I feel WPT is an amazing tool to rapidly test new ideas as long as it involves modifying the HTML file. I am currently testing some of the new ideas out there and will post results of our testing soon. 
 
 ## Credits 
 * Addy Osmani - For the quicklink library
