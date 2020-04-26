@@ -2,6 +2,16 @@
 
 Couple of days back I was trying to figure out how to test and evaluate the impact of new performance optimizations without having to make server side changes. The optimization that came to mind was [Addy Osmani](https://twitter.com/addyosmani)'s [quicklink](https://github.com/GoogleChromeLabs/quicklink/issues) library. The question is how can one test this library on their page without having to go through a server side change to the base page HTML file. 
 
+## What kind of optimizations can you test? 
+
+There are two places you can inject a script into your page
+* Option A - Once the browser decides its navigated to a new page and [fires the frameNavigated](https://github.com/WPO-Foundation/wptagent/blob/56b8c4931864cae6cabe38f2e70f5c9ec75a23a1/internal/devtools.py#L945) event  - this is if you inject the script into the “inject script” section of the WPT UI
+* Option B - Once the page has completed loading - this is if you are using “WPT scripts“ to script out a user flow. 
+
+So if you are looking to improve performance of the current page you will need to use option A, but if you are looking to improve performance of future pages by making optimizations to the current page then you should go with option B
+
+Expert tip - insert a custom metric using performance.mark(‘wpt-inject’) to figure out when the JS completed execution.
+
 ## Webpagetest to the rescue !
 
 Webpagetest(WPT) scripts are extremely powerful to setup a user flow for testing and you have the ability to inject JavaScripts into the page. So below are the steps on how you can leverage the quicklink library to test how much of an improvement you can see for your website. 
